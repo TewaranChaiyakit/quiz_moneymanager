@@ -27,7 +27,7 @@ class SummaryScreen extends StatelessWidget {
       });
       return {'Income': totalIncome, 'Expense': totalExpense};
     }
-    return {};
+    return {'Income': 0, 'Expense': 0};
   }
 
   @override
@@ -56,9 +56,9 @@ class SummaryScreen extends StatelessWidget {
                     x: 0,
                     barRods: [
                       BarChartRodData(
-                        toY: data['Income'] ?? 0,  // แก้ไขจาก 'y' เป็น 'toY'
+                        toY: data['Income'] ?? 0,
                         color: Colors.green,
-                        width: 30,  // เพิ่มความกว้างของแท่ง
+                        width: 30,
                       ),
                     ],
                     showingTooltipIndicators: [0],
@@ -67,9 +67,9 @@ class SummaryScreen extends StatelessWidget {
                     x: 1,
                     barRods: [
                       BarChartRodData(
-                        toY: data['Expense'] ?? 0,  // แก้ไขจาก 'y' เป็น 'toY'
+                        toY: data['Expense'] ?? 0,
                         color: Colors.red,
-                        width: 30,  // เพิ่มความกว้างของแท่ง
+                        width: 30,
                       ),
                     ],
                     showingTooltipIndicators: [0],
